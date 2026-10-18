@@ -220,3 +220,19 @@ fun FormBiodataScreen() {
                 }
 
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_medium)))
+
+                // Baris 2: Email
+                OutlinedTextField(
+                    value = email,
+                    onValueChange = { email = it },
+                    placeholder = {
+                        Text(text = stringResource(id = R.string.hint_email))
+                    },
+                    singleLine = true,
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                    shape = fieldShape,
+                    colors = fieldColors,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_medium)))
