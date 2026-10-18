@@ -236,3 +236,34 @@ fun FormBiodataScreen() {
                 )
 
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_medium)))
+
+                // Baris 3: Tgl Lahir & Experience
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(
+                        dimensionResource(id = R.dimen.spacing_medium)
+                    )
+                ) {
+                    OutlinedTextField(
+                        value = birthDate,
+                        onValueChange = { birthDate = it },
+                        placeholder = {
+                            Text(text = stringResource(id = R.string.hint_birth_date))
+                        },
+                        readOnly = true,
+                        singleLine = true,
+                        trailingIcon = {
+                            IconButton(onClick = { datePickerDialog.show() }) {
+                                Icon(
+                                    imageVector = Icons.Default.DateRange,
+                                    contentDescription = stringResource(id = R.string.cd_calendar_icon),
+                                    tint = colorResource(id = R.color.icon_tint)
+                                )
+                            }
+                        },
+                        shape = fieldShape,
+                        colors = fieldColors,
+                        modifier = Modifier
+                            .weight(1f)
+                            .clickable { datePickerDialog.show() }
+                    )
