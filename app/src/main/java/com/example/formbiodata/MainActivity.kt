@@ -133,3 +133,20 @@ fun FormBiodataScreen() {
                     .height(dimensionResource(id = R.dimen.header_image_height))
                     .align(Alignment.TopCenter)
             )
+
+
+
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(
+                    top = dimensionResource(id = R.dimen.floating_box_top_offset),
+                    bottom = dimensionResource(id = R.dimen.floating_box_bottom_margin)
+                )
+                .shadow(
+                    elevation = dimensionResource(id = R.dimen.floating_box_elevation),
+                    shape = RoundedCornerShape(
+                        topStart = dimensionResource(id = R.dimen.floating_box_corner_radius),
+                        topEnd = dimensionResource(id = R.dimen.floating_box_corner_radius)
+                    ),
+                    clip = false
+                )
