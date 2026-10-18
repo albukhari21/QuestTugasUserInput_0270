@@ -323,3 +323,27 @@ fun FormBiodataScreen() {
 
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
 
+                // Pilihan Checkbox Skill (Android, UI/UX, Web)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    SkillCheckboxItem(
+                        label = stringResource(id = R.string.skill_android),
+                        checked = isAndroidChecked,
+                        onCheckedChange = { isAndroidChecked = it }
+                    )
+
+                    SkillCheckboxItem(
+                        label = stringResource(id = R.string.skill_ui_ux),
+                        checked = isUiUxChecked,
+                        onCheckedChange = { isUiUxChecked = it }
+                    )
+
+                    SkillCheckboxItem(
+                        label = stringResource(id = R.string.skill_web),
+                        checked = isWebChecked,
+                        onCheckedChange = { isWebChecked = it }
+                    )
+                }
