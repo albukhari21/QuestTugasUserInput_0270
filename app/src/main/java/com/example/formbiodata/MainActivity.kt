@@ -205,3 +205,18 @@ fun FormBiodataScreen() {
                         colors = fieldColors,
                         modifier = Modifier.weight(1f)
                     )
+
+                    OutlinedTextField(
+                        value = lastName,
+                        onValueChange = { lastName = it },
+                        placeholder = {
+                            Text(text = stringResource(id = R.string.hint_last_name))
+                        },
+                        singleLine = true,
+                        shape = fieldShape,
+                        colors = fieldColors,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_medium)))
