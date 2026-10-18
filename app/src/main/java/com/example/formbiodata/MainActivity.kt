@@ -187,3 +187,21 @@ fun FormBiodataScreen() {
 
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
 
+                // Baris 1: Nama Depan & Nama Belakang
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(
+                        dimensionResource(id = R.dimen.spacing_medium)
+                    )
+                ) {
+                    OutlinedTextField(
+                        value = firstName,
+                        onValueChange = { firstName = it },
+                        placeholder = {
+                            Text(text = stringResource(id = R.string.hint_first_name))
+                        },
+                        singleLine = true,
+                        shape = fieldShape,
+                        colors = fieldColors,
+                        modifier = Modifier.weight(1f)
+                    )
