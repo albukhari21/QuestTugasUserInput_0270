@@ -79,3 +79,10 @@ fun FormBiodataScreen() {
     val emptyText = stringResource(id = R.string.empty_string)
     val dateFormatPattern = stringResource(id = R.string.date_format_pattern)
     val experienceOptions = stringArrayResource(id = R.array.experience_options)
+
+    var firstName by remember { mutableStateOf(emptyText) }
+    var lastName by remember { mutableStateOf(emptyText) }
+    var email by remember { mutableStateOf(emptyText) }
+    var birthDate by remember { mutableStateOf(emptyText) }
+    var selectedExperience by remember { mutableStateOf(emptyText) }
+    var isExperienceExpanded by remember { mutableStateOf(false) }
