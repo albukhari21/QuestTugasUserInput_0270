@@ -72,3 +72,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormBiodataScreen() {
+    val emptyText = stringResource(id = R.string.empty_string)
+    val dateFormatPattern = stringResource(id = R.string.date_format_pattern)
+    val experienceOptions = stringArrayResource(id = R.array.experience_options)
