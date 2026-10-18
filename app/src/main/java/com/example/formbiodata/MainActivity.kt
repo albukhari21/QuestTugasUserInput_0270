@@ -398,3 +398,11 @@ fun FormBiodataScreen() {
             )
         }
     }
+
+    Preview(showBackground = true, showSystemUi = true)
+    @Composable
+    fun FormBiodataScreenPreview() {
+        MaterialTheme {
+            FormBiodataScreen()
+        }
+    }
