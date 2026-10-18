@@ -347,3 +347,28 @@ fun FormBiodataScreen() {
                         onCheckedChange = { isWebChecked = it }
                     )
                 }
+
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_extra_large)))
+
+                // Tombol Proceed
+                Button(
+                    onClick = { /* Aksi ketika tombol Proceed ditekan */ },
+                    shape = RoundedCornerShape(dimensionResource(id = R.dimen.button_corner_radius)),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = colorResource(id = R.color.button_proceed_bg),
+                        contentColor = colorResource(id = R.color.button_proceed_text)
+                    ),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(dimensionResource(id = R.dimen.button_height))
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.btn_proceed),
+                        fontSize = dimensionResource(id = R.dimen.text_size_button).value.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+        }
+    }
+}
