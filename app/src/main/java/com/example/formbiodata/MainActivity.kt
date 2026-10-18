@@ -372,3 +372,29 @@ fun FormBiodataScreen() {
         }
     }
 }
+
+
+    @Composable
+    fun SkillCheckboxItem(
+        label: String,
+        checked: Boolean,
+        onCheckedChange: (Boolean) -> Unit
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Checkbox(
+                checked = checked,
+                onCheckedChange = onCheckedChange,
+                colors = CheckboxDefaults.colors(
+                    checkedColor = colorResource(id = R.color.primary_purple),
+                    uncheckedColor = colorResource(id = R.color.icon_tint)
+                )
+            )
+            Text(
+                text = label,
+                color = colorResource(id = R.color.text_primary),
+                fontSize = dimensionResource(id = R.dimen.text_size_body).value.sp
+            )
+        }
+    }
