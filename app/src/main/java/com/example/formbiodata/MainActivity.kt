@@ -150,3 +150,19 @@ fun FormBiodataScreen() {
                     ),
                     clip = false
                 )
+                .clip(
+                    RoundedCornerShape(
+                        topStart = dimensionResource(id = R.dimen.floating_box_corner_radius),
+                        topEnd = dimensionResource(id = R.dimen.floating_box_corner_radius)
+                    )
+                )
+                .background(colorResource(id = R.color.box_surface_white))
+                .padding(
+                    horizontal = dimensionResource(id = R.dimen.box_padding_horizontal),
+                    vertical = dimensionResource(id = R.dimen.box_padding_vertical)
+                )
+            ) {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
