@@ -311,3 +311,15 @@ fun FormBiodataScreen() {
                 }
 
                 Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
+
+                // Label Pilih Skill Anda
+                Text(
+                    text = stringResource(id = R.string.label_select_skill),
+                    color = colorResource(id = R.color.text_primary),
+                    fontSize = dimensionResource(id = R.dimen.text_size_section_label).value.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
+
