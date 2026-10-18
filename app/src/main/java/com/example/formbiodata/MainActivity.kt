@@ -102,3 +102,13 @@ fun FormBiodataScreen() {
         calendar.get(Calendar.MONTH),
         calendar.get(Calendar.DAY_OF_MONTH)
     )
+
+    val fieldShape = RoundedCornerShape(dimensionResource(id = R.dimen.field_corner_radius))
+    val fieldColors = OutlinedTextFieldDefaults.colors(
+        focusedBorderColor = colorResource(id = R.color.primary_purple),
+        unfocusedBorderColor = colorResource(id = R.color.border_gray),
+        focusedLabelColor = colorResource(id = R.color.primary_purple),
+        unfocusedLabelColor = colorResource(id = R.color.text_secondary),
+        focusedTextColor = colorResource(id = R.color.text_primary),
+        unfocusedTextColor = colorResource(id = R.color.text_primary)
+    )
