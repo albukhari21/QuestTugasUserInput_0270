@@ -112,3 +112,15 @@ fun FormBiodataScreen() {
         focusedTextColor = colorResource(id = R.color.text_primary),
         unfocusedTextColor = colorResource(id = R.color.text_primary)
     )
+
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        containerColor = colorResource(id = R.color.scaffold_bg)
+    ) { innerPadding ->
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .background(colorResource(id = R.color.scaffold_bg))
+        ) {
+// Gambar Background di bagian atas
