@@ -293,3 +293,21 @@ fun FormBiodataScreen() {
                                 .fillMaxWidth()
                         )
 
+                        ExposedDropdownMenu(
+                            expanded = isExperienceExpanded,
+                            onDismissRequest = { isExperienceExpanded = false }
+                        ) {
+                            experienceOptions.forEach { option ->
+                                DropdownMenuItem(
+                                    text = { Text(text = option) },
+                                    onClick = {
+                                        selectedExperience = option
+                                        isExperienceExpanded = false
+                                    }
+                                )
+                            }
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
