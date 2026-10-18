@@ -267,3 +267,29 @@ fun FormBiodataScreen() {
                             .weight(1f)
                             .clickable { datePickerDialog.show() }
                     )
+
+                    ExposedDropdownMenuBox(
+                        expanded = isExperienceExpanded,
+                        onExpandedChange = { isExperienceExpanded = !isExperienceExpanded },
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        OutlinedTextField(
+                            value = selectedExperience,
+                            onValueChange = {},
+                            readOnly = true,
+                            singleLine = true,
+                            placeholder = {
+                                Text(text = stringResource(id = R.string.hint_experience))
+                            },
+                            trailingIcon = {
+                                ExposedDropdownMenuDefaults.TrailingIcon(
+                                    expanded = isExperienceExpanded
+                                )
+                            },
+                            shape = fieldShape,
+                            colors = fieldColors,
+                            modifier = Modifier
+                                .menuAnchor(MenuAnchorType.PrimaryNotEditable)
+                                .fillMaxWidth()
+                        )
+
