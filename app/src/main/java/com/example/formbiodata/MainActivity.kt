@@ -166,3 +166,13 @@ fun FormBiodataScreen() {
                 modifier = Modifier.fillMaxWidth(),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                // Judul Form
+                Text(
+                    text = stringResource(id = R.string.title_form_biodata),
+                    color = colorResource(id = R.color.primary_purple),
+                    fontSize = dimensionResource(id = R.dimen.text_size_title).value.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                )
+
+                Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
