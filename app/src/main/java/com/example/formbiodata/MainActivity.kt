@@ -124,3 +124,12 @@ fun FormBiodataScreen() {
                 .background(colorResource(id = R.color.scaffold_bg))
         ) {
 // Gambar Background di bagian atas
+            Image(
+                painter = painterResource(id = R.drawable.background),
+                contentDescription = stringResource(id = R.string.cd_background_image),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(id = R.dimen.header_image_height))
+                    .align(Alignment.TopCenter)
+            )
