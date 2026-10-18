@@ -86,3 +86,7 @@ fun FormBiodataScreen() {
     var birthDate by remember { mutableStateOf(emptyText) }
     var selectedExperience by remember { mutableStateOf(emptyText) }
     var isExperienceExpanded by remember { mutableStateOf(false) }
+
+    var isAndroidChecked by remember { mutableStateOf(false) }
+    var isUiUxChecked by remember { mutableStateOf(false) }
+    var isWebChecked by remember { mutableStateOf(false) }
